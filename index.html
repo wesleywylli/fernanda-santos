@@ -235,7 +235,10 @@
                             <div class="flex items-center gap-4 mb-4">
                                 <div
                                     class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center text-gold">
-                                    <i data-lucide="disc" class="w-6 h-6"></i>
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
                                 </div>
                                 <h3 class="font-sans font-bold text-xl text-parchment">Gravação de EP</h3>
                             </div>
@@ -246,7 +249,11 @@
                             <div class="flex items-center gap-4 mb-4">
                                 <div
                                     class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center text-gold">
-                                    <i data-lucide="mic" class="w-6 h-6"></i>
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                                        <path d="M19 10v1a7 7 0 0 1-14 0v-1"></path>
+                                        <line x1="12" x2="12" y1="19" y2="22"></line>
+                                    </svg>
                                 </div>
                                 <h3 class="font-sans font-bold text-xl text-parchment">Estrutura Profissional</h3>
                             </div>
@@ -330,11 +337,18 @@
                     </a>
                     <a href="https://www.youtube.com/@cantorafersantos" target="_blank"
                         class="text-parchment/60 hover:text-gold transition-colors" aria-label="YouTube">
-                        <i data-lucide="youtube" class="w-5 h-5"></i>
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                            <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2Z"></path>
+                            <path d="m10 15 5-3-5-3z"></path>
+                        </svg>
                     </a>
                     <a href="https://www.instagram.com/fernandasantosoficial_/" target="_blank"
                         class="text-parchment/60 hover:text-gold transition-colors" aria-label="Instagram">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
                     </a>
                 </div>
 
@@ -347,11 +361,13 @@
     </main>
 
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
         // GSAP Animations
         document.addEventListener("DOMContentLoaded", (event) => {
+            // Initialize Lucide Icons (if any remain)
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
             gsap.registerPlugin(ScrollTrigger);
 
             // Hero Animations
